@@ -1,99 +1,77 @@
-/* General Body & Typography */
-body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f7f6;
-    color: #333;
-}
+@charset "utf-8";
 
-h1, h2 {
-    font-family: 'Georgia', serif;
-}
+/* Reset */
+* { margin: 0; padding: 0; }
+body { font-family: 'Helvetica Neue', Arial, sans-serif; }
+li { list-style: none; }
+a { text-decoration: none; }
 
-a {
-    color: #005a9c;
-    text-decoration: none;
-}
+/* Layout */
+.container { display: flex; }
+.sidebar { width: 250px; height: 100vh; background: #003366; color: #fff; position: fixed; }
+.content { margin-left: 250px; padding: 40px; background: #f4f7f6; }
 
-a:hover {
-    text-decoration: underline;
-}
+/* Sidebar */
+.sidebar h1 { padding: 40px 20px 20px; font-size: 24px; text-align: center; }
+.sidebar nav ul { }
+.sidebar nav li { }
+.sidebar nav a { display: block; padding: 15px 20px; color: #fff; border-bottom: 1px solid #004080; }
+.sidebar nav a:hover { background: #004080; }
 
-/* Header */
-header {
-    background-color: #003366;
-    color: #ffffff;
-    padding: 2rem 0;
-    text-align: center;
-    border-bottom: 5px solid #005a9c;
-}
+/* Content */
+.content section { margin-bottom: 40px; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.content h2 { font-size: 28px; color: #003366; border-bottom: 2px solid #005a9c; padding-bottom: 10px; margin-bottom: 20px; }
+.content p { line-height: 1.8; margin-bottom: 15px; }
+.content ul { margin-left: 20px; }
+.content li { margin-bottom: 10px; }
 
-header h1 {
-    margin: 0;
-    font-size: 3rem;
-}
+/* Discography */
+#discography li { cursor: pointer; padding: 10px; transition: background-color 0.3s; }
+#discography li:hover { background-color: #e9ecef; }
 
-/* Navigation */
-header nav {
-    margin-top: 1rem;
+/* Album Detail */
+#album-detail-container { margin-top: 20px; }
+#album-detail {
+    display: none;
+    margin-top: 2rem;
+    padding: 2rem;
+    background-color: #e9ecef;
+    border-radius: 8px;
 }
-
-header nav h2 {
-    font-size: 1.2rem;
-    border-bottom: 1px solid #ffffff;
-    display: inline-block;
-    padding-bottom: 5px;
-    margin-bottom: 1rem;
+#album-detail h3 {
+    font-size: 1.8rem;
+    color: #003366;
+    margin-top: 0;
 }
-
-header nav ul {
+.album-content {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+.album-content img {
+    max-width: 200px;
+    height: auto;
+    border: 3px solid #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+.album-content div {
+    flex: 1;
+}
+.album-content ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
-
-header nav ul li {
-    display: inline;
-    margin: 0 15px;
+.album-content li {
+    padding: 5px 0;
 }
 
-header nav ul li a {
-    color: #ffffff;
-    font-weight: bold;
-}
-
-/* Main Content & Sections */
-main {
-    width: 80%;
-    max-width: 960px;
-    margin: 2rem auto;
-    padding: 0 20px;
-}
-
-section {
-    background: #ffffff;
-    margin-bottom: 2rem;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    scroll-margin-top: 20px; /* Offset for smooth scrolling */
-}
-
-section h2 {
-    font-size: 2rem;
-    color: #003366;
-    border-bottom: 2px solid #005a9c;
-    padding-bottom: 10px;
-    margin-top: 0;
-}
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 1.5rem 0;
-    background-color: #333;
-    color: #f4f4f4;
-    font-size: 0.9rem;
+    padding: 20px 0;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #777;
 }

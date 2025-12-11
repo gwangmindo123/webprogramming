@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 document.addEventListener('DOMContentLoaded', function() {
     const events = document.querySelectorAll('.event');
 
@@ -26,3 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
         event.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
     });
 });
+=======
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('The Beatles website is ready!');
+});
+>>>>>>> origin/광민

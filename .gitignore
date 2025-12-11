@@ -1,0 +1,8 @@
+# Dependencies
+/node_modules
+
+# VS Code directory
+/.vscode
+
+# Gemini CLI metadata
+/.gemini
